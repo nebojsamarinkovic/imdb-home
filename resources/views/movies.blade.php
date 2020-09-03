@@ -1,17 +1,12 @@
-<html>
-<head>
-<title>Movies</title>
-</head>
+@extends('layouts.main')
 
-<body>
-    <h1>Movies</h1>
-    <div>
+@section('content')
     @foreach ($movies as $movie)
     <div>
         <a href="/movies/{{$movie->id}}">{{$movie->title}}</a>
         <p>{{$movie->storyline}}</p>
     </div>
     @endforeach
-    </div>
-</body>
-</html>
+    
+@endsection
+    

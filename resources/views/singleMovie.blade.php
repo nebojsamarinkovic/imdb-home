@@ -1,9 +1,6 @@
-<html>
-<head>
-<title>Single Movie</title>
-</head>
+@extends('layouts.main')
 
-<body>
+@section('content')
     <h1>{{$movie->title}} ({{$movie->year}})</h1>
     <hr/>
     <div>
@@ -11,5 +8,4 @@
     <p>Director: {{$movie->director}}</p>
     <p>Storyline: {{$movie->storyline}}</p>
     </div>
-</body>
-</html>
+@endsection
