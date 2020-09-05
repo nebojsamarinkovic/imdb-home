@@ -27,7 +27,7 @@ class CreateMovieRequest extends FormRequest
                 'title' => 'required|string|max:100',
                 'genre' => 'required|string|max:50',
                 'director' => 'required|string|max:30',
-                'year' => 'required|integer', 
+                'year' => 'sometimes|digits_between:1900,2020', 
                 'storyline' => 'sometimes|max:1000'
         ];
     }
