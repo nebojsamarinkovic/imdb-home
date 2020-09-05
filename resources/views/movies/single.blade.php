@@ -1,11 +1,20 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>{{$movie->title}} ({{$movie->year}})</h1>
+    <h1>{{$title}} ({{$year}})</h1>
     <hr/>
     <div>
-    <p>Genre: {{$movie->genre}}</p>
-    <p>Director: {{$movie->director}}</p>
-    <p>Storyline: {{$movie->storyline}}</p>
+    <p>Genre: {{$genre}}</p>
+    <p>Director: {{$director}}</p>
+    <p>Storyline: {{$storyline}}</p>
+    </div>
+    <hr />
+    <div>
+    <h3>Comments</h3>
+    @foreach($comments ?? '' as $comment)
+      <div class="alert alert-primary">
+        {{$comment->content}}
+      </div>
+    @endforeach
     </div>
 @endsection

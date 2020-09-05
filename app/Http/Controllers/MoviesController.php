@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateMovieRequest;
 Use App\Movie;
+Use App\Comment;
 use Illuminate\Http\Request;
 
 class MoviesController extends Controller
@@ -54,7 +55,17 @@ class MoviesController extends Controller
     public function show($id)
     {
         $movie = Movie::findOrFail($id);
-        return view('movies.single', ['movie' => $movie]);
+        // $comments = Comment::where('movie_id', $id)->get();
+
+        
+        return view('movies.single', [
+            'title' => $movie->title,
+            'genre' => $movie->genre,
+            'director' => $movie->director,
+            'year' => $movie->year,
+            'storyline' => $movie->storyline,
+            'comments' => $movie->comments
+            ]);
     }
 
     /**
