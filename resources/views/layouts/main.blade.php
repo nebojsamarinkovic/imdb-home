@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Movies Database</title>
+    <title>yield('title')</title>
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/app.css') }}">
 </head>
  
@@ -15,7 +15,7 @@
       <a class="nav-link" href="/movies">Movies</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/add">Add movie</a>
+      <a class="nav-link" href="/create">Add movie</a>
     </li>
      </ul>
 </nav>
